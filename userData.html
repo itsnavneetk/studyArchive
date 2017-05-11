@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  
+  
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+<?php
+session_start();
+
+if(isset($_SESSION['users'])){
+	$name = $_SESSION['users'];
+}else{
+	$name = "nobody";
+}
+
+?>
+<body>
+  <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Password Recovery</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="Email" class="label">Email <?php  echo $name; ?></label>
+					<input id="email" type="text" class="input">
+
+
+				</div>
+				<div class="group">
+					
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Send recovery mail">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="index.html">Logout</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+  
+  
+</body>
+</html>
