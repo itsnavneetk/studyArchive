@@ -73,7 +73,22 @@ $dbhost="localhost";
 		});
 	}
 </script>
+temp space
+<p>
+:
+<?php
+session_start();
+
+if(isset($_SESSION['cID'])){
+    $name1 = $_SESSION['cID'];
+   
+   echo "string : ". $name1;
+}else{
+	echo "no session ";
+}
 
 
+?>
+</p>
 </body>
 </html>

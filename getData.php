@@ -28,6 +28,9 @@ if(!empty($_POST["dID"])){
 	}
 		
 	}
+
+	//$_SESSION['cID'] =$_POST[''];
+	
 	?>
 
 
