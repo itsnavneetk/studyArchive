@@ -6,6 +6,7 @@ modules:
   * password encryption
   * sessions
   * user page
+  * dynamic dropdown menu
   
 -built on php, JS   
   
