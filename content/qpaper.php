@@ -66,7 +66,6 @@ if(isset($_SESSION['users'])){
          <h3 style="color: white;">Howdy, <?php  echo $fname.'!'; ?></h3> 
          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"><?php echo $university.' '; ?>University</label>
          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
-         
          <div class="login-form">
             <div class="sign-in-htm">
                <div id="wrapper">
@@ -75,13 +74,35 @@ if(isset($_SESSION['users'])){
 
 
                     <div id="thumb1paper">
-                        <font color="black">course demo</font>
+                        <font color="black">Previous year question papers</font>
                         <br>
                         <br>
 
-                   		
-  
-          
+                             
+                        <?php
+                        
+                        $sql = "SELECT alt, link FROM pdf where cId=1";
+                        $result = mysqli_query($conn, $sql);
+                        if (mysqli_num_rows($result) == 0) {
+                            echo "sorry";}
+                            else{
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    $link = "http://docs.google.com/viewer?url=http://pimg.co/sc-samples/sample.pdf";  
+                                    $link = "pdf/Computer Networks (ICT-305)3.pdf";
+                                    echo "<li><a href='".$link."' target='_blank'>".$row['alt']."</a><br><br></li>";
+                                    
+
+                                }
+
+                            } ?> 
+
+                            <!--
+                                  <div>
+                        <iframe src="http://docs.google.com/viewer?url=http://pimg.co/sc-samples/sample.pdf&embedded=true" style="width:1000px; height:500px;" frameborder="0">
+    Your browser should support iFrame to view this PDF document</iframe>
+
+ 
+                    </div>-->
                     </div>
                     
                 </form>            
@@ -91,11 +112,10 @@ if(isset($_SESSION['users'])){
     </div>
 </div>
 
-<div class="foot-lnk" style="margin-top: 609px;">
+<div class="foot-lnk" style="margin-top: 600px;">
     <br>
-        <a id="Logout" href="../userData.php" style="color: black; ">Back</a>
+    <a id="Logout" href="../userData.php" style="color: black; ">Back</a>
     <a id="Logout" href="../index.html" style="color: black; ">Logout</a>
-
 </div>
 
 

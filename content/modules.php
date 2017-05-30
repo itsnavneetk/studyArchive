@@ -75,11 +75,12 @@ if(isset($_SESSION['users'])){
 
 
                     <div id="thumb1paper">
-                        <font color="black">course demo</font>
+                        <font color="black">Course</font>   
                         <br>
                         <br>
 
-                   		
+                   	<!--	<iframe src="ppt/Pointers in C++.ppt" width="800px" heigt="600px">Module 1</iframe> -->
+                        <iframe frameborder="0" src="https://docs.google.com/spreadsheets/d/1NeUShwlPrOvHuO0gisl7XYnoNrqODw1x8JFNlzSaEro/edit?usp=sharing" width="600" height="300"></iframe>
   
           
                     </div>

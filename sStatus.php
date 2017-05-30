@@ -72,19 +72,20 @@
 							echo $cID;
 							?>
 							<p>
-								Course name: ___
+								Course name: ___ <br><br>
+								Your <br> subscription <br> expires in : <br> <?php echo "__months __ days"; ?>
 							</p>
 						</font>
 					</div>
 
 					<div id="thumb21">
 						<font color="black">Annual<br> membership</font>
-						<a href="payPal/index.php">
+						<a href="">
 							<div id="c211">
 								<font color="black">Rs. 500 <br>year</font>
 							</div>
 						</a>
-						<a href="payPal/index.php">
+						<a href="">
 							<div id="c212">
 								<font color="black">Rs. 300 <br> for 6months</font>
 							</div>
@@ -95,7 +96,7 @@
 
 					<div id="thumb31">
 
-								<a type="submit" class="button" href="index.html" value="pay" style="margin-top: 50px; ">Logout</a>
+								<a type="submit" class="button" href="index.html" value="pay" style="margin-top: 25px; ">Logout</a>
 								<?php
 								?>
 					</div>

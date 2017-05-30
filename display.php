@@ -62,7 +62,7 @@ if(isset($_SESSION['users'])){
 	}
 
 	?>
-	<body>
+	<body style="padding: ">
 		<div class="login-wrap1">
 			<div class="login-html" style="position: fixed;
 
@@ -116,7 +116,7 @@ if(isset($_SESSION['users'])){
                 	</div>
                 </div>
                 
-                
+                    
                 <div id="below">
                 	<div class="group">
                 		<input type="submit" class="button" value="Go" style="margin-top: 50px; ">
@@ -146,12 +146,12 @@ if(isset($_SESSION['users'])){
 
             		?>
 
-            		<h3><font color="black"><?php echo $type; ?> account</font></h3>
+            		<h3 style="margin: 0px;"><font color="black"><?php echo $type; ?> account</font></h3>
             		<?php
             		if($type=="guest"){
             			echo "<a href='subs.php'>"?><pre>	Upgrade to premium</pre><?php "</a>";
             		}else{
-            			echo ""?><pre>					   </pre><?php "</a>";
+            			echo "<a href='sStatus.php'>"?><pre>	View subscription status</pre><?php "</a>";
             		}
 
             		?>
@@ -165,7 +165,7 @@ if(isset($_SESSION['users'])){
 
             			?>
             			<div>
-            				<p value="<?php echo $cour['cname']; ?>"><br><hr><?php  echo $cour["text"]; ?></p>
+            				<p style="padding-bottom: 0px;" value="<?php echo $cour['cname']; ?>"><br><hr><?php  echo $cour["text"]; ?></p>
             				<hr>
             			</div>
             			<?php
@@ -221,6 +221,7 @@ if(isset($_SESSION['users'])){
             			<a href="content/vid.php">
             				<div id="thumb1">
             					<font color="black">Video: Intro</font>
+                                
             				</div>
             			</a>
 
@@ -231,13 +232,13 @@ if(isset($_SESSION['users'])){
             			</a>
 
             			<a href="subs.php">
-            				<div id="thumb3">
+            				<div id="thumb3" style="background: url(locked.png) rgba(40,57,101,.9);">
             					<font color="black">Previous year papers</font>
             				</div>
             			</a>
 
             			<a href="subs.php">
-            				<div id="thumb4">
+            				<div id="thumb4" style="background: url(locked.png) rgba(40,57,101,.9);">
             					<font color="black">Study Material</font>
             				</div>
             			</a>
@@ -248,7 +249,7 @@ if(isset($_SESSION['users'])){
             	}
             	?>
             </div>                               
-            <div class="foot-lnk" style="margin: 120px;">
+            <div class="foot-lnk" style="margin-top: 370px; margin-right: 1px;">
             	<br>
             	<a id="Logout" href="index.html" style="color: black; ">Logout</a>
             </div>
